@@ -16,3 +16,32 @@ body {
     color: rgb(241, 241, 241);
     background-color: rgb(47, 47, 48);
 }
+.srcContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+}
+#srcRotate {
+    width: 300px;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+}
+#srcRedirect {
+    opacity: 0;
+    font-size: 24px;
+    font-weight: 900;
+    position: absolute;
+    animation: srcText 0.3s ease-in-out forwards;
+    animation-delay: 0.1s;
+}
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+@keyframes srcText {
+    0% {opacity: 0;}
+    100% { opacity: 1;}
+}
